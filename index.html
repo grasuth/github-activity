@@ -1,0 +1,79 @@
+<html>
+<head>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.1.0/jquery.timeago.min.js"></script>
+  <script src="github_activity.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      username = getURLParameter('username')
+      limit = getURLParameter('limit')
+      GithubActivity.show_activity(username, '#github-activity', limit);
+    });
+  </script>
+  <style>
+  html, body {
+    width: 98%;
+    height: 100%;
+  }
+
+  body {
+    font-family: Consolas;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #4183c4;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+  .activity {
+    clear: both;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .gravatar {
+    float: left;
+    clear: both;
+    margin: 0 10px 10px 0;
+    display: inline;
+  }
+
+  .gravatar img {
+    padding: 2px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 3px #bbb;
+  }
+
+  .information {
+    width: 70%;
+    float: left;
+    display: inline-block;
+  }
+
+  .muted {
+    color: #666;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  </style>
+</head>
+<body>
+  <div id="github-activity">
+  </div>
+</body>
+</html>
